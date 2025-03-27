@@ -1,0 +1,115 @@
+/* Estilos profissionais para o Kanban dentro do WhatsApp Web */
+
+:root {
+    --primary-color: #25D366;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --border-radius: 10px;
+    --shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+#kanban-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 420px;
+    height: 90vh;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+.kanban-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#kanban-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kanban-column {
+    background: var(--secondary-color);
+    padding: 15px;
+    border: 1px solid #ddd;
+    min-height: 200px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: background 0.3s;
+}
+
+.kanban-column:hover {
+    background: #ececec;
+}
+
+.kanban-column strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.message {
+    background-color: white;
+    margin: 6px 0;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    cursor: grab;
+    font-size: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message .contact-info {
+    font-weight: bold;
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.message:active {
+    transform: scale(1.05);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #1EBE5D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #18A84C;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
